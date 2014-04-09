@@ -1,0 +1,7 @@
+= simple_form_for Query.new, url: queries_create_path , :html => { :class => 'form-horizontal' } do |f|
+  = f.input :uid
+  = f.input :pub0
+  = f.input :page
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'
+%hr
