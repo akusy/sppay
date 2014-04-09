@@ -33,7 +33,4 @@ class QueriesController < ApplicationController
     Rails.cache.read(key, namespace: :sppay)
   end
 
-  def get_fixture
-    JSON.parse IO.read("spec/fixtures/response.json")
-  end
 end
