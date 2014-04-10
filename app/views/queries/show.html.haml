@@ -2,16 +2,8 @@
   %h1 Response
 
 -if @response.present?
-  -if @response["count"].to_i > 0
-    .offer
-      - @response["offers"].each do |o|
-        .title= "Title: #{o["title"]}"
-        .payout= "Offer Payout: #{o["payout"]}"
-        .thumbnail 
-          Offer thumbnail
-          %br= image_tag(o["thumbnail"]["lowres"])
-  -else
-    .no_offers No offers
+  = @response.offers
+
 
 
 .form-actions

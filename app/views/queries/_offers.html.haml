@@ -1,0 +1,7 @@
+.offer
+  - offers.each do |o|
+    .title= "Title: #{o["title"]}"
+    .payout= "Offer Payout: #{o["payout"]}"
+    .thumbnail 
+      Offer thumbnail
+      %br= image_tag(o["thumbnail"]["lowres"])

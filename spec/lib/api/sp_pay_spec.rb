@@ -30,7 +30,7 @@ describe Api::SpPay do
 
     context "Response status is 200" do
       it "returns json" do
-        expect(subject.get_data).to eq({"test"=>"test"})
+        expect(subject.get_data).to eq("{\"test\" : \"test\"}")
       end
     end    
 

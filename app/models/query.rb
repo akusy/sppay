@@ -8,7 +8,7 @@ class Query < ActiveRecord::Base
 
   def get_response
     if response = Api::SpPay.new(uid, pub0, page).get_data
-      write_to_cache(id, response)
+      write_to_cache(id, Response.new(response))
     end
   end
 
