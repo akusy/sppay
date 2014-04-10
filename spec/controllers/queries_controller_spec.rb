@@ -24,6 +24,7 @@ describe QueriesController do
         get :show, id: query.id
 
         assigns(:response).should eq("value")
+        assigns(:response).should be_decorated_with ResponseDecorator
         expect(response.status).to eq 200
         expect(response).to render_template :show
       end

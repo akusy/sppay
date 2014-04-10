@@ -9,13 +9,14 @@ class QueriesController < ApplicationController
       respond_with @query
     else
       flash[:alert] = @query.errors.full_messages.join('. ')
-      respond_with nil, location: root_path
+      redirect_to root_path
     end
   end
 
   def show
     query = Query.find_by_id params[:id]
-    if query && @response = read_from_cache(query.id)
+    if query && response = read_from_cache(query.id)
+      @response = ResponseDecorator.new(response)
       respond_with @response
     else
       flash[:alert] = "No valid response, try again"

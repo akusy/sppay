@@ -12,6 +12,7 @@ gem 'haml-rails', '~> 0.5.3'
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem 'simple_form', '~> 3.0.1'
+gem 'draper', '~> 1.3.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

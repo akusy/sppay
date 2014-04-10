@@ -23,7 +23,7 @@ class Api::SpPay
       Rails.logger.error "SpPay request error: #{e}"
       return nil
     end
-    valid_params?(response) ? JSON.parse(response.body) : nil
+    valid_params?(response) ? response.body : nil
   end
 
   private
